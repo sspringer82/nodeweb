@@ -2,10 +2,11 @@ const model = require('./model');
 
 const controller = {
   listAction(req, res) {
-    res.send(model.list);
+    res.send(model.getAll());
   },
   detailAction(req, res) {
-    res.send(model.detail);
+    const id = parseInt(req.params.id);
+    res.send(model.getOne(id));
   },
 };
 
