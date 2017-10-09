@@ -1,16 +1,9 @@
 const express = require('express');
+const router = require('./router');
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello Express client');
-});
-app.get('/list', (req, res) => {
-  res.send('Hello List');
-});
-app.get('/details', (req, res) => {
-  res.send('Hello Details');
-});
+app.use('/todo', router);
 
 app.listen(8080, () => {
   console.log('listening');
