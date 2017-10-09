@@ -2,12 +2,13 @@ const model = require('./model');
 
 const controller = {
   listAction(req, res) {
-    res.render('list');
-    //res.send(model.getAll());
+    const tasks = model.getAll();
+    res.render('list', { tasks: tasks });
   },
   detailAction(req, res) {
     const id = parseInt(req.params.id, 10);
-    res.send(model.getOne(id));
+    const task = model.getOne(id);
+    res.render('detail', { task: task });
   },
 };
 
