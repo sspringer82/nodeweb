@@ -4,6 +4,12 @@ Erstellung der  package.json Datei
 npm init
 ```
 
+# Debugger
+
+```
+node --inspect-brk index.js
+```
+
 # Certificate
 
 ```
