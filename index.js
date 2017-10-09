@@ -3,8 +3,8 @@ const router = require('./router');
 
 const app = express();
 
-app.use('/todo', router);
+app.use(router);
 
 app.listen(8080, () => {
-  console.log('listening');
+  console.log('Server is listening to http://localhost:8080');
 });
