@@ -1,3 +1,9 @@
+# Init
+Erstellung der  package.json Datei
+```
+npm init
+```
+
 # Certificate
 
 ```
