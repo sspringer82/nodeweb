@@ -1,9 +1,11 @@
-const http = require('http');
+const express = require('express');
 
-http
-  .createServer((req, res) => {
-    res.end('Hello World');
-  })
-  .listen(8080, function() {
-    console.log('listening to http://localhost:8080');
-  });
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello Express client');
+});
+
+app.listen(8080, () => {
+  console.log('listening');
+});
