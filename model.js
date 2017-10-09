@@ -10,9 +10,6 @@ const model = {
   getAll() {
     return this.todos;
   },
-  getGreeting() {
-    return 'Hello World';
-  },
 };
 
 module.exports = model;
